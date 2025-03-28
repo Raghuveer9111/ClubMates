@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            -->
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.StudentId</td>
+                    <td>@student.StudentName</td>
+                    <td>@student.Email</td>
+                    <td>@student.Age</td>
+                    <td>@student.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div>
+        <form action="/Department/DeletStudent" method="post">
+            <input type="number" name="SudentId" value="@Model." />
+
+            <button>Submit</button>
+        </form>
+    </div>
+</div>

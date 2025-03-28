@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ClubMates.Models.Department>
+@{
+    ViewBag.Title = "ShowData";
+}
+
+
+<h2>ShowData</h2>
+<div class="department">
+    <table>
+        <thead>
+            <tr>
+                <th>Department Id</th>
+                <th>Department Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var department in Model)
+            {
+                <tr>
+                    <td>@department.DepartmentId</td>
+                    <td>@department.DepartmentName</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

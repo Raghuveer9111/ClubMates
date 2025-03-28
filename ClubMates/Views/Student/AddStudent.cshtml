@@ -1,0 +1,60 @@
+﻿
+@model ClubMates.Models.Student
+
+@{
+    ViewBag.Title = "AddStudent";
+}
+
+
+@*<head>
+        <link rel="stylesheet" href="../../Content/stylesform.css">
+    </head>*@
+<body class="content">
+    <h2>AddStudent</h2>
+
+    <h2>Form</h2>
+
+    <form action="/Student/AddStudent" method="post">
+        @*<div class="box">
+            <label>Student Id</label>
+            <input type="number" value="@Model.StudentId" name="StudentId" />
+            <br />
+        </div>*@
+
+        <div class="box">
+            <label>Name</label>
+            <input type="text" value="@Model.StudentName" name="StudentName" />
+            <br />
+        </div>
+        <div class="box">
+            <label>Email</label>
+            <input type="email" name="Email" value="@Model.Email"/>
+            <br />
+        </div>
+        <div class="box">
+            <label>Phone Number</label>
+            <input type="number" name="PhoneNumber" value="@Model.PhoneNumber"/>
+            <br />
+        </div>
+        <div class="box">
+            <label>Date of Birth</label>
+            <input type="datetime" name="DateOfBirth" value="@Model.DateOfBirth" />
+            <br />
+        </div>
+        <div class="box">
+            <label>Height</label>
+            <input type="number" name="Height" value="@Model.Height"/>
+            <br />
+        </div>
+        <div class="box">
+            <label>Weight</label>
+            <input type="number" name="Weight" value="@Model.Weight"/>
+            <br />
+        </div>
+        <div class="box">
+            <button>Save</button>
+        </div>
+    </form>
+</body>
+
+

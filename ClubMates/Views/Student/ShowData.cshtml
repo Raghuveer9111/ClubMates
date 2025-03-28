@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ClubMates.Models.Student>
+
+@{
+    ViewBag.Title = "ShowData";
+}
+
+<h2>ShowData</h2>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.StudentId</td>
+                    <td>@student.StudentName</td>
+                    <td>@student.Email</td>
+                    <td>@student.Age</td>
+                    <td>@student.PhoneNumber</td>
+                    <td>
+                        <form action="/Student/DeleteStudent" method="post">
+                            <input type="hidden" name="StudentId" value="@student.StudentId" />
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
